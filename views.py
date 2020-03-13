@@ -10,20 +10,19 @@ class SignUp:
     def __init__(self, root):
         self.frame = Frame(root, height=1024, width=1024, bg='white')
         self.frame.pack()
-        self.frame.pack_propagate(0)
-
         self.add_labels()
         self.add_entry()
         self.add_button()
         self.add_radio()
+        self.frame.pack_propagate(0)
 
     def add_labels(self):
         self.main_title = Label(self.frame, text='Sign up', font=('Segoe UI Black bold', 40), bg='white')
         self.main_title.pack(side=TOP)
 
         self.user_label = Label(self.frame, bg='white')
-        self.user_img=PhotoImage(file='E:\\assets\\user.png')
-        self.user_label.config(image=self.user_img)
+        # self.user_img=PhotoImage(file='E:\\assets\\user.png')
+        # self.user_label.config(image=self.user_img)
         self.user_label.place(x=480, y=80)
 
         self.name_label = Label(self.frame, text='Name : ', font=('Eras Demi ITC bold', 15), bg='white')
@@ -55,8 +54,8 @@ class SignUp:
 
     def add_button(self):
         self.signin=Button(self.frame, highlightthickness=0, width=80, height=40, bg='white', activebackground='white', borderwidth=0, command=self.getData)
-        self.img = PhotoImage(file="E:\\assets\login.png")
-        self.signin.config(image=self.img)
+        # self.img = PhotoImage(file="E:\\assets\login.png")
+        # self.signin.config(image=self.img)
         self.signin.place(x=480,y=400)
     def getData(self):
         print("Name:",self.name_entry.get())
