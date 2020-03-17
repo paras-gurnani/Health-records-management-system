@@ -1,38 +1,62 @@
 from tkinter import *
 from tkinter import ttk
-window = Tk()
-# tkinter.Labelframe(window, text='User details')
-class disease_details:
+from datetime import date
+from tkinter import messagebox
 
+window = Tk()
+
+
+class disease_details:
     def __init__(self, window):
-        self.frame = LabelFrame(window, width=640, height=640, bg='pink', text='User details', font=('Lucida Bright', 15), borderwidth='20')
+        self.frame = Frame(window, height=640, width=640, bg='white')
         self.frame.pack()
+        self.frame.pack_propagate(0)
         self.add_label()
         self.add_entry()
         self.add_button()
 
     def add_label(self):
-        l1 = Label(self.frame, text='Symptoms  : ', padx=10, bg='pink', font=('Dubai', 12))
-        l1.place(x=80, y=80)
+        current_date = str(date.today())
+        self.date_of_visit = Label(self.frame, text='Date:' + current_date, font=('Eras Demi ITC bold', 15), bg='white')
+        self.date_of_visit.place(x=10, y=10)
 
-        l2 = Label(self.frame, text='Disease  : ',padx=10, bg='pink', font=('Dubai', 12))
-        l2.place(x=80, y=200)
+        self.sym_label = Label(self.frame, text='Symptoms  : ', padx=10, bg='white', font=('Eras Demi ITC bold', 15))
+        self.sym_label.place(x=50, y=160)
 
-        l3 = Label(self.frame, text='Medicines  : ',bg='pink', font=('Dubai', 12))
-        l3.place(x=80, y=240)
+        dis_label = Label(self.frame, text='Disease  : ', padx=10, bg='white', font=('Eras Demi ITC bold', 15))
+        dis_label.place(x=70, y=280)
+
+        med_label = Label(self.frame, text='Medicines  : ', bg='white', font=('Eras Demi ITC bold', 15))
+        med_label.place(x=63, y=330)
+
     def add_entry(self):
-        e1 = ttk.Entry(self.frame)
-        e1.place(x=180, y=80, width=400, height=100)
-        e1.focus()
+        self.sym_entry = Text(self.frame,  font=('Eras Demi ITC bold', 15))
+        # self.e1.bind('<Enter>',self.addFocus)
+        # self.e1.bind('<Leave>',self.addFocus)
+        self.sym_entry.place(x=180, y=130, width=400, height=100)
+        self.sym_entry.focus()
 
-        e2 = ttk.Entry(self.frame)
-        e2.place(x=180, y=200, width=400)
+        self.dis_entry = ttk.Entry(self.frame,  font=('Eras Demi ITC bold', 15))
+        self.dis_entry.place(x=180, y=280, width=400)
 
-        e3 = ttk.Entry(self.frame)
-        e3.place(x=180, y=240, width=400, height=50)
+        self.med_entry = ttk.Entry(self.frame,  font=('Eras Demi ITC bold', 15))
+        self.med_entry.place(x=180, y=325, width=400, height=50)
 
+    # def addFocus(self,event):
+    #     if event=='<Enter>':
+    #         self.e1.configure(highlightbackground='blue')
+    #     else:
+    #         self.e1.configure(highlightbackground = 'black')
     def add_button(self):
-        b1 = Button(self.frame, text='Submit', relief='groove', font=('Dubai', 12))
-        b1.place(x=250, y=340)
-c = disease_details(window)
+        b1 = Button(self.frame, text='Submit', relief='groove', font=('Eras Demi ITC bold', 12), command=self.getData)
+        b1.place(x=350, y=420)
+
+    def getData(self):
+        disease_name = self.dis_entry.get()
+        med_list = self.med_entry.get().split(',')
+        symptoms = self.sym_entry.get('1.0',END)
+        print(disease_name, med_list, symptoms)
+
+
+disease_details(window)
 window.mainloop()
