@@ -3,7 +3,7 @@ from tkinter import ttk
 from datetime import date
 from tkinter import messagebox
 
-window = Tk()
+# window = Tk()
 
 
 class disease_details:
@@ -57,6 +57,6 @@ class disease_details:
         symptoms = self.sym_entry.get('1.0',END)
         print(disease_name, med_list, symptoms)
 
-
-disease_details(window)
-window.mainloop()
+#
+# disease_details(window)
+# window.mainloop()

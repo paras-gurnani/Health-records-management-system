@@ -3,13 +3,14 @@ from tkinter import *
 # from tkinter.ttk import *
 
 # root = Tk()
-# root.geometry('1024x700')
+# # root.geometry('1024x700')
 # root.title("Patients info")
 
 
 class PatientInfo:
-    def __init__(self,root):
-        self.frame.destroy()
+    def __init__(self,root,recordsPage,diseasePage):
+        self.diseasePage=diseasePage
+        self.recordsPage=recordsPage
         self.frame = Frame(root, height=700, width=1024, bg="white")
         self.frame.pack()
         self.create_border()
@@ -50,12 +51,17 @@ class PatientInfo:
         self.p_email.place(x=150, y=550)
 
     def add_buttons(self):
-        self.show_records=Button(self.frame,text="Show Previous Records",font=('Segoe UI Black ', 20),bg="grey")
+        self.show_records=Button(self.frame,text="Show Previous Records",font=('Segoe UI Black ', 20),bg="grey",command=self.changeRecordsPage)
         self.show_records.place(x=650,y=200)
-        self.add_entry = Button(self.frame, text="Add new Entry", font=('Segoe UI Black ', 20), bg="grey")
+        self.add_entry = Button(self.frame, text="Add new Entry", font=('Segoe UI Black ', 20), bg="grey",command=self.changeDiseasePage)
         self.add_entry.place(x=700, y=300)
 
+    def changeDiseasePage(self):
+        self.diseasePage(self)
+    def changeRecordsPage(self):
+        self.recordsPage(self)
 
+#
 #
 # p = PatientInfo(root)
 #

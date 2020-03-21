@@ -4,12 +4,12 @@ from tkinter import messagebox
 
 # window = Tk()
 # window.title('Records')
-# window.geometry('1024x1024')
+# # window.geometry('1024x1024')
 
 class Record:
-    def __init__(self, root):
-        self.frame.destroy()
-        self.frame = Frame(root, height=1024, width=1024, bg='white')
+    def __init__(self, root,patientInfoPage):
+        self.patientInfoPage=patientInfoPage
+        self.frame = Frame(root, height=500, width=1024, bg='white')
         self.frame.pack()
         self.frame.pack_propagate(0)
         self.addLabels()
@@ -21,7 +21,7 @@ class Record:
 
         # Cannot add image
 
-        self.photo = PhotoImage(file='pat.png')
+        self.photo = PhotoImage(file='./Images/pat.png')
         self.image_label = Label(self.frame, bg='white')
         self.image_label.image=self.photo                   # anchoring the image
         self.image_label.configure(image=self.photo)
@@ -45,6 +45,13 @@ class Record:
             self.record.insert('', 'end',  values=(ele[0], ele[1], ele[2], ele[3])) # parameters:1) root of element(root node here since table) 2) after enter 3) Values
         self.record.place(x=20, y=200)
 
-#
+        #Making a back button
+        self.back=Button(self.frame,text="Back", font=('Eras Demi bold', 15), bg='grey',command=self.changePatientInfo)
+        self.back.place(x=20,y=440)
+
+    def changePatientInfo(self):
+        self.patientInfoPage(self)
+
+
 # Record(window)
 # window.mainloop()

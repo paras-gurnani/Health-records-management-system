@@ -4,9 +4,9 @@ from tkinter import messagebox
 
 
 class SignUp:
-    def __init__(self, root):
+    def __init__(self, root,loginPage):
         # Binding ENTER key with signup button:
-        print("I was called")
+        self.loginPage=loginPage
         # root.pack_forget()
         root.bind('<Return>', self.getData)
         self.frame = Frame(root, height=700, width=900, bg='white')
@@ -24,7 +24,7 @@ class SignUp:
         self.main_title.pack(side=TOP)
 
         self.user_label = Label(self.frame, bg='white')
-        self.user_img=PhotoImage(file='./user.png')
+        self.user_img=PhotoImage(file='./Images/user.png')
         self.user_label.config(image=self.user_img)
         self.user_label.place(x=480, y=80)
 
@@ -69,8 +69,8 @@ class SignUp:
 
     def add_button(self):
         self.signin=Button(self.frame, highlightthickness=0, width=80, height=40, bg='white', activebackground='white', borderwidth=0, command=self.getData)
-        # self.img = PhotoImage(file="E:\\assets\login.png")
-        # self.signin.config(image=self.img)
+        self.img = PhotoImage(file="./Images/login.png")
+        self.signin.config(image=self.img)
         self.signin.place(x=480,y=480)
     def getData(self, event=None):
         print("Name:",self.name_entry.get())
@@ -84,6 +84,7 @@ class SignUp:
             print("EmailId = ",self.email_entry.get())
         except ValueError as ve:
             messagebox.showerror('Error', "Enter valid age")
+            self.loginPage(self)
 
 # class PatientInfoView:
 #
