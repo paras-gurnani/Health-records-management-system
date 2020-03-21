@@ -1,4 +1,4 @@
-from PIL import Image
+# from PIL import Image
 class Patients:
     def __init__(self, name, age, gender, email, phone_number, image=None, disease=[], medicines=[], notes="",
                  date_of_visits=[]):

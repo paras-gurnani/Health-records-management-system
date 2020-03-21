@@ -2,13 +2,14 @@ from tkinter import *
 
 # from tkinter.ttk import *
 
-root = Tk()
-root.geometry('1024x700')
-root.title("Patients info")
+# root = Tk()
+# root.geometry('1024x700')
+# root.title("Patients info")
 
 
 class PatientInfo:
     def __init__(self,root):
+        self.frame.destroy()
         self.frame = Frame(root, height=700, width=1024, bg="white")
         self.frame.pack()
         self.create_border()
@@ -55,7 +56,7 @@ class PatientInfo:
         self.add_entry.place(x=700, y=300)
 
 
-
-p = PatientInfo(root)
-
-root.mainloop()
+#
+# p = PatientInfo(root)
+#
+# root.mainloop()

@@ -2,12 +2,13 @@ from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
 
-window = Tk()
-window.title('Records')
-window.geometry('1024x1024')
+# window = Tk()
+# window.title('Records')
+# window.geometry('1024x1024')
 
 class Record:
     def __init__(self, root):
+        self.frame.destroy()
         self.frame = Frame(root, height=1024, width=1024, bg='white')
         self.frame.pack()
         self.frame.pack_propagate(0)
@@ -35,15 +36,15 @@ class Record:
 
         # Making table:
         info = [[1,'d1','m1,m2,m3','s1s2'],[10,'d5','m1,m10,m3','s10s2']]
-        cols=('Date of visit', 'Disease', 'medications', 'Symptoms')
+        cols=('Date of visit', 'Disease', 'medications', 'Notes')
         self.record = ttk.Treeview(self.frame, columns=cols, show='headings')   #sets identifier to each columns using parameter 'COLUMNS'
-        self.record.column('Symptoms', width=380)
+        self.record.column('Notes', width=380)
         for col in cols:
             self.record.heading(col, text=col)      #Sets column headings
         for ele in info:
             self.record.insert('', 'end',  values=(ele[0], ele[1], ele[2], ele[3])) # parameters:1) root of element(root node here since table) 2) after enter 3) Values
         self.record.place(x=20, y=200)
 
-
-Record(window)
-window.mainloop()
+#
+# Record(window)
+# window.mainloop()
