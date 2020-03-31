@@ -1,0 +1,16 @@
+use hospital;
+select * from patients;
+select * from disease;
+select * from entries;
+insert into patients(full_name,age,gender,email,phone_no) values('Paras_Gurnani',20,'M','parasgurnani3@gmail.com','9561559970');
+insert into patients(full_name,age,gender,email,phone_no) values('Divesh Hariani',20,'M','Diveshhariani@gmail.com','9874561230');
+insert into patients(full_name,age,gender,email,phone_no) values('Karan Kalani',20,'M','Karankalani@gmail.com','7878787878');
+insert into patients(full_name,age,gender,email,phone_no) values('Sameer Israni',20,'M','Sameerisrani@gmail.com','1231231230');
+insert into patients(full_name,age,gender,email,phone_no) values('Aakash Vanjani',20,'M','Aakashvanjani@gmail.com','4564564560');
+insert into disease(disease_name,medicines) values('tuberculosis','Isoniazid,Rifampin,Pyrazinamide');
+insert into disease(disease_name,medicines) values('Dengue','Acetaminophen,Aspirin,Celol_plus');
+insert into disease(disease_name,medicines) values('Diarrhoea','Imodium,Kaopectate,Pepto-Bismol');
+insert into disease(disease_name,medicines) values('Thyroid','Synthroid,Levoxyl');
+insert into disease(disease_name,medicines) values('Pneumonia','Azithromycin,Ciproflaxin');
+insert into disease(disease_name,medicines) values('Malaria','Coartem,Malarone,mefloquine');
+insert into entries(patient_id,disease_id,date_of_entry,note) values (1,2,'2020/02/10','Diagnosed with Dengue would prescribe Celol plus and aspirin for fever');

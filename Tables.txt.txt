@@ -1,0 +1,32 @@
+create database if not exists Hospital;
+use Hospital;
+create table Patients(
+patient_id int not null auto_increment primary key,
+full_name varchar(25) not null,
+age int not null
+);
+create table Disease(
+disease_id int not null auto_increment primary key,
+disease_name varchar(30) not null,
+medicines varchar(40)
+);
+create table entries(
+patient_id int not null,
+disease_id int not null,
+date_of_entry date not null,
+note varchar(100),
+foreign key(patient_id) references Patients(patient_id),
+foreign key(disease_id) references Disease(disease_id)
+);
+
+alter table Patients
+add gender varchar(1) after age,
+add email varchar(30) after gender,
+add phone_no varchar(10) after email;
+
+alter table entries
+add entry_id int;
+
+alter table entries
+drop column entry_id,
+add column entry_id int auto_increment not null primary key first;
