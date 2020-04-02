@@ -10,26 +10,26 @@ from disease import disease_details
 
 def signupPage(current_page):
     current_page.frame.pack_forget()
-    current_page = SignUp(window,loginPage)
+    current_page = SignUp(window, loginPage)
 
 def loginPage(current_page):
     current_page.frame.pack_forget()
-    current_page=first_page(window,signupPage,patientInfoPage)
+    current_page = first_page(window, signupPage, patientInfoPage)
 
 def recordsPage(current_page):
     current_page.frame.pack_forget()
-    current_page=Record(window,patientInfoPage)
+    current_page = Record(window, patientInfoPage)
 
 def diseasePage(current_page):
     current_page.frame.pack_forget()
-    current_page=disease_details(window)
+    current_page = disease_details(window)
 
 def patientInfoPage(current_page):
     current_page.frame.pack_forget()
-    current_page=PatientInfo(window,recordsPage,diseasePage)
+    current_page = PatientInfo(window, recordsPage, diseasePage)
 
 
-window=Tk()
+window = Tk()
 
-current_page=first_page(window,signupPage,patientInfoPage)
+current_page = first_page(window, signupPage, patientInfoPage)
 window.mainloop()

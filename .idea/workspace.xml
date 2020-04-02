@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55be89f2-6fc8-4c70-9ded-a9946cca89dc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Patient_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/Patient_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Signup.py" beforeDir="false" afterPath="$PROJECT_DIR$/Signup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/disease.py" beforeDir="false" afterPath="$PROJECT_DIR$/disease.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patients.py" beforeDir="false" afterPath="$PROJECT_DIR$/patients.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/records.py" beforeDir="false" afterPath="$PROJECT_DIR$/records.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +28,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Python.Views">
-    <configuration name="MatPractise" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Signup">
+    <configuration name="Patient_info" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -41,7 +46,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MatPractise.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Patient_info.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -50,7 +55,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Signup" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Signup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -71,7 +76,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Views" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="login" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -83,7 +88,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Views.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/login.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -92,7 +97,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="records" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="patients" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/patients.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="records" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -113,34 +139,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PythonProject" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/views.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Views" />
         <item itemvalue="Python.Signup" />
         <item itemvalue="Python.records" />
-        <item itemvalue="Python.views" />
-        <item itemvalue="Python.MatPractise" />
+        <item itemvalue="Python.Patient_info" />
+        <item itemvalue="Python.login" />
+        <item itemvalue="Python.patients" />
       </list>
     </recent_temporary>
   </component>
@@ -169,42 +174,95 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="done some basic changes with positioning of objects" />
+    <option name="LAST_COMMIT_MESSAGE" value="done some basic changes with positioning of objects" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="0" y="94" key="#Inspections" timestamp="1585583891430">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="0" y="94" key="#Inspections/0.0.1536.864@0.0.1536.864" timestamp="1585583891430" />
+    <state x="129" y="66" key="#MatPractise" timestamp="1585583904739">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="129" y="66" key="#MatPractise/0.0.1536.864@0.0.1536.864" timestamp="1585583904739" />
+    <state x="361" y="94" key="#Notifications" timestamp="1585782643299">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="94" key="#Notifications/0.0.1536.864@0.0.1536.864" timestamp="1585782643299" />
+    <state x="129" y="66" key="#disease" timestamp="1585583952939">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="129" y="66" key="#disease/0.0.1536.864@0.0.1536.864" timestamp="1585583952939" />
+    <state x="373" y="31" key="CommitChangelistDialog2" timestamp="1585808952801">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="373" y="31" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1585808952801" />
+    <state x="129" y="197" key="EnvironmentVariablesDialog" timestamp="1585583924695">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="129" y="197" key="EnvironmentVariablesDialog/0.0.1536.864@0.0.1536.864" timestamp="1585583924695" />
     <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1583937712714">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1583937712714" />
-    <state width="1515" height="223" key="GridCell.Tab.0.bottom" timestamp="1584800768585">
+    <state width="739" height="221" key="GridCell.Tab.0.bottom" timestamp="1585809535293">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1584800768585" />
-    <state width="1515" height="223" key="GridCell.Tab.0.center" timestamp="1584800768584">
+    <state width="739" height="221" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1585809535293" />
+    <state width="739" height="221" key="GridCell.Tab.0.center" timestamp="1585809535292">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1584800768584" />
-    <state width="1515" height="223" key="GridCell.Tab.0.left" timestamp="1584800768584">
+    <state width="739" height="221" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1585809535292" />
+    <state width="739" height="221" key="GridCell.Tab.0.left" timestamp="1585809535292">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1584800768584" />
-    <state width="1515" height="223" key="GridCell.Tab.0.right" timestamp="1584800768584">
+    <state width="739" height="221" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1585809535292" />
+    <state width="739" height="221" key="GridCell.Tab.0.right" timestamp="1585809535293">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1584800768584" />
-    <state width="1515" height="277" key="GridCell.Tab.1.bottom" timestamp="1584261913546">
+    <state width="739" height="221" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1585809535293" />
+    <state width="1484" height="274" key="GridCell.Tab.1.bottom" timestamp="1585782514318">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="277" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1584261913546" />
-    <state width="1515" height="277" key="GridCell.Tab.1.center" timestamp="1584261913545">
+    <state width="1484" height="274" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1585782514318" />
+    <state width="1484" height="274" key="GridCell.Tab.1.center" timestamp="1585782514318">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="277" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1584261913545" />
-    <state width="1515" height="277" key="GridCell.Tab.1.left" timestamp="1584261913545">
+    <state width="1484" height="274" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1585782514318" />
+    <state width="1484" height="274" key="GridCell.Tab.1.left" timestamp="1585782514318">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="277" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1584261913545" />
-    <state width="1515" height="277" key="GridCell.Tab.1.right" timestamp="1584261913546">
+    <state width="1484" height="274" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1585782514318" />
+    <state width="1484" height="274" key="GridCell.Tab.1.right" timestamp="1585782514318">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="277" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1584261913546" />
+    <state width="1484" height="274" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1585782514318" />
+    <state x="0" y="10" key="SettingsEditor" timestamp="1585584021299">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="0" y="10" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1585584021299" />
+    <state x="103" y="260" key="com.intellij.ide.util.TipDialog" timestamp="1585759139640">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="103" y="260" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1585759139640" />
+    <state x="0" y="140" key="new project wizard" timestamp="1585759166842">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="0" y="140" key="new project wizard/0.0.1536.864@0.0.1536.864" timestamp="1585759166842" />
   </component>
 </project>
