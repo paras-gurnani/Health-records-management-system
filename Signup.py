@@ -4,12 +4,14 @@ from tkinter import messagebox
 
 
 class SignUp:
-    def __init__(self, root,loginPage):
+    def __init__(self, root):
+        self.root=root
         # Binding ENTER key with signup button:
-        self.loginPage=loginPage
+        # self.loginPage = loginPage
         # root.pack_forget()
         root.bind('<Return>', self.getData)
-        self.frame = Frame(root, height=700, width=900, bg='white')
+
+        self.frame = Frame(root, height=640, width=640, bg='white')
         self.frame.pack()
         self.frame.pack_propagate(0)
 
@@ -20,13 +22,14 @@ class SignUp:
 
 
     def add_labels(self):
-        self.main_title = Label(self.frame, text='Sign up', font=('Segoe UI Black bold', 40), bg='white')
-        self.main_title.pack(side=TOP)
+        self.main_title = Label(self.frame, text='Sign up', font=('Segoe UI Black bold', 30), bg='white')
+        self.main_title.place(x=240, y=30)
 
-        self.user_label = Label(self.frame, bg='white')
-        self.user_img=PhotoImage(file='./Images/user.png')
-        self.user_label.config(image=self.user_img)
-        self.user_label.place(x=480, y=80)
+        self.photo = PhotoImage(file='./Images/user.png')
+        self.image_label = Label(self.frame, bg='white')
+        self.image_label.image = self.photo  # anchoring the image
+        self.image_label.config(image=self.photo)
+        self.image_label.place(x=300, y=100)
 
         self.name_label = Label(self.frame, text='Name : ', font=('Eras Demi ITC bold', 15), bg='white')
         self.name_label.place(x=110, y=200)
@@ -44,17 +47,17 @@ class SignUp:
         self.phone_num_label.place(x=35, y=400)
 
     def add_entry(self):
-        self.name_entry = ttk.Entry(self.frame, width=60, justify=CENTER, font=('Eras Demi ITC bold', 15))
+        self.name_entry = ttk.Entry(self.frame, width=30, justify=LEFT, font=('Eras Demi ITC bold', 15))
         self.name_entry.place(x=180, y=205)
         self.name_entry.focus()
 
-        self.age_entry = ttk.Entry(self.frame, width = 20, justify=CENTER, font=('Eras Demi ITC bold', 15))
+        self.age_entry = ttk.Entry(self.frame, width=30, justify=LEFT, font=('Eras Demi ITC bold', 15))
         self.age_entry.place(x=180, y=300)
 
-        self.email_entry = ttk.Entry(self.frame, width=20, justify=CENTER, font=('Eras Demi ITC bold', 15))
+        self.email_entry = ttk.Entry(self.frame, width=30, justify=LEFT, font=('Eras Demi ITC bold', 15))
         self.email_entry.place(x=180, y=350)
 
-        self.phone_entry = ttk.Entry(self.frame, width=20, justify=CENTER, font=('Eras Demi ITC bold', 15))
+        self.phone_entry = ttk.Entry(self.frame, width=30, justify=LEFT, font=('Eras Demi ITC bold', 15))
         self.phone_entry.place(x=180, y=400)
 
     def add_radio(self):
@@ -68,10 +71,11 @@ class SignUp:
         self.female.place(x=300, y=250)
 
     def add_button(self):
-        self.signin=Button(self.frame, highlightthickness=0, width=80, height=40, bg='white', activebackground='white', borderwidth=0, command=self.getData)
-        self.img = PhotoImage(file="./Images/login.png")
-        self.signin.config(image=self.img)
-        self.signin.place(x=480,y=480)
+        self.signin = Button(self.frame, highlightthickness=0, text='Signup',command=self.getData, font=('Eras Demi ITC',15))
+        # self.img = PhotoImage(file="./Images/login.png")
+        # self.signin.config(image=self.img)
+        self.signin.place(x=290, y=450)
+
     def getData(self, event=None):
         print("Name:",self.name_entry.get())
         try:
@@ -82,19 +86,14 @@ class SignUp:
                 print("Gender: FEMALE")
             print("Phonenumber = ",int(self.phone_entry.get()))
             print("EmailId = ",self.email_entry.get())
+            import patient_login
+            self.frame.destroy()
+            patient_login.PatientLogin(self.root)   ### OPTION ###
         except ValueError as ve:
-            messagebox.showerror('Error', "Enter valid age")
-            self.loginPage(self)
+            messagebox.showerror('Error', "invalid credentials")
 
-# class PatientInfoView:
-#
-#     def __init__(self,root):
-#         self.menubar = Menu(root)
-#         self.menubar.add_command(label='Info')
-#
-#         self.menubar.add_command(label='Visualize data')
-#         self.menubar.add_command(label='History')
 
-# app = SignUp(window)
-# # window.config(menu=app.menubar)
-# window.mainloop()
+if __name__ == '__main__':
+    window = Tk()
+    SignUp(window)
+    window.mainloop()
