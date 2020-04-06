@@ -2,13 +2,15 @@ from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
 
-window = Tk()
+
 class SignUp:
     def __init__(self, root):
+        self.root=root
         # Binding ENTER key with signup button:
         # self.loginPage = loginPage
         # root.pack_forget()
         root.bind('<Return>', self.getData)
+
         self.frame = Frame(root, height=640, width=640, bg='white')
         self.frame.pack()
         self.frame.pack_propagate(0)
@@ -23,10 +25,11 @@ class SignUp:
         self.main_title = Label(self.frame, text='Sign up', font=('Segoe UI Black bold', 30), bg='white')
         self.main_title.place(x=240, y=30)
 
-        self.user_label = Label(self.frame, bg='white')
-        self.user_img=PhotoImage(file='./Images/user.png')
-        self.user_label.config(image=self.user_img)
-        self.user_label.place(x=250, y=90)
+        self.photo = PhotoImage(file='./Images/user.png')
+        self.image_label = Label(self.frame, bg='white')
+        self.image_label.image = self.photo  # anchoring the image
+        self.image_label.config(image=self.photo)
+        self.image_label.place(x=300, y=100)
 
         self.name_label = Label(self.frame, text='Name : ', font=('Eras Demi ITC bold', 15), bg='white')
         self.name_label.place(x=110, y=200)
@@ -68,10 +71,10 @@ class SignUp:
         self.female.place(x=300, y=250)
 
     def add_button(self):
-        self.signin = Button(self.frame, highlightthickness=0, width=80, height=40, bg='white', activebackground='white', borderwidth=0, command=self.getData)
-        self.img = PhotoImage(file="./Images/login.png")
-        self.signin.config(image=self.img)
-        self.signin.place(x=250,y=450)
+        self.signin = Button(self.frame, highlightthickness=0, text='Signup',command=self.getData, font=('Eras Demi ITC',15))
+        # self.img = PhotoImage(file="./Images/login.png")
+        # self.signin.config(image=self.img)
+        self.signin.place(x=290, y=450)
 
     def getData(self, event=None):
         print("Name:",self.name_entry.get())
@@ -83,19 +86,14 @@ class SignUp:
                 print("Gender: FEMALE")
             print("Phonenumber = ",int(self.phone_entry.get()))
             print("EmailId = ",self.email_entry.get())
+            import patient_login
+            self.frame.destroy()
+            patient_login.PatientLogin(self.root)   ### OPTION ###
         except ValueError as ve:
             messagebox.showerror('Error', "invalid credentials")
-            self.loginPage(self)
 
-# class PatientInfoView:
-#
-#     def __init__(self,root):
-#         self.menubar = Menu(root)
-#         self.menubar.add_command(label='Info')
-#
-#         self.menubar.add_command(label='Visualize data')
-#         self.menubar.add_command(label='History')
 
-app = SignUp(window)
-# window.config(menu=app.menubar)
-window.mainloop()
+if __name__ == '__main__':
+    window = Tk()
+    SignUp(window)
+    window.mainloop()

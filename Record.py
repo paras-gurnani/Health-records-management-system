@@ -7,8 +7,7 @@ from tkinter import messagebox
 # # window.geometry('1024x1024')
 
 class Record:
-    def __init__(self, root,patientInfoPage):
-        self.patientInfoPage=patientInfoPage
+    def __init__(self, root):
         self.frame = Frame(root, height=500, width=1024, bg='white')
         self.frame.pack()
         self.frame.pack_propagate(0)
@@ -18,8 +17,6 @@ class Record:
         name = 'Dummy name'
         age = 20
         email = 'dummy@gmail.com'
-
-        # Cannot add image
 
         self.photo = PhotoImage(file='./Images/pat.png')
         self.image_label = Label(self.frame, bg='white')
@@ -46,12 +43,11 @@ class Record:
         self.record.place(x=20, y=200)
 
         #Making a back button
-        self.back=Button(self.frame,text="Back", font=('Eras Demi bold', 15), bg='grey',command=self.changePatientInfo)
+        self.back=Button(self.frame,text="Back", font=('Eras Demi bold', 15), bg='grey')
         self.back.place(x=20,y=440)
 
-    def changePatientInfo(self):
-        self.patientInfoPage(self)
 
-
-# Record(window)
-# window.mainloop()
+if __name__=='__main__':
+    window = Tk()
+    Record(window)
+    window.mainloop()
