@@ -1,6 +1,8 @@
 from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
+from patients import *
+from Connection import *
 
 
 class SignUp:
@@ -46,6 +48,9 @@ class SignUp:
         self.phone_num_label = Label(self.frame, text='Phone number : ', font=('Eras Demi ITC bold', 15), bg='white')
         self.phone_num_label.place(x=35, y=400)
 
+        self.dob=Label(self.frame,text="DOB : ",font=('Eras Demi ITC bold', 15),bg='white')
+        self.dob.place(x=118,y=450)
+
     def add_entry(self):
         self.name_entry = ttk.Entry(self.frame, width=30, justify=LEFT, font=('Eras Demi ITC bold', 15))
         self.name_entry.place(x=180, y=205)
@@ -59,6 +64,9 @@ class SignUp:
 
         self.phone_entry = ttk.Entry(self.frame, width=30, justify=LEFT, font=('Eras Demi ITC bold', 15))
         self.phone_entry.place(x=180, y=400)
+
+        self.dob_entry=ttk.Entry(self.frame, width=30, justify=LEFT, font=('Eras Demi ITC bold', 15))
+        self.dob_entry.place(x=180,y=450)
 
     def add_radio(self):
         self.gender_value = IntVar()
@@ -74,18 +82,23 @@ class SignUp:
         self.signin = Button(self.frame, highlightthickness=0, text='Signup',command=self.getData, font=('Eras Demi ITC',15))
         # self.img = PhotoImage(file="./Images/login.png")
         # self.signin.config(image=self.img)
-        self.signin.place(x=290, y=450)
+        self.signin.place(x=290, y=500)
 
     def getData(self, event=None):
         print("Name:",self.name_entry.get())
+        gender=None
         try:
             print("Age:",int(self.age_entry.get()))
             if self.gender_value.get() == 0:
                 print("Gender: MALE")
+                gender='M'
             else:
                 print("Gender: FEMALE")
+                gender='F'
             print("Phonenumber = ",int(self.phone_entry.get()))
             print("EmailId = ",self.email_entry.get())
+            new_patient=Patients(self.name_entry.get(),int(self.age_entry.get()),gender,self.email_entry.get(),self.phone_entry.get(),self.dob_entry.get())
+            insertData(new_patient)
             import patient_login
             self.frame.destroy()
             patient_login.PatientLogin(self.root)   ### OPTION ###
