@@ -64,14 +64,14 @@ class PatientInfo:
         import Record
         win = Toplevel()
         win.title('Records')
-        Record.Record(win)
+        Record.Record(win,self.patient)
 
 
     def toDisease(self):
         import Disease
         win = Toplevel()
         win.title('Diagnose')
-        Disease.Disease(win)
+        Disease.Disease(win,self.patient)
 
 
 if __name__=='__main__':

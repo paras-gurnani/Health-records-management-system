@@ -1,22 +1,24 @@
 from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
+from Connection import *
 
 # window = Tk()
 # window.title('Records')
 # # window.geometry('1024x1024')
 
 class Record:
-    def __init__(self, root):
+    def __init__(self, root,patient):
         self.frame = Frame(root, height=500, width=1024, bg='white')
+        self.patient=patient
         self.frame.pack()
         self.frame.pack_propagate(0)
         self.addLabels()
 
     def addLabels(self):
-        name = 'Dummy name'
-        age = 20
-        email = 'dummy@gmail.com'
+        name = self.patient.name
+        age = self.patient.age
+        email = self.patient.email
 
         self.photo = PhotoImage(file='./Images/pat.png')
         self.image_label = Label(self.frame, bg='white')
@@ -31,8 +33,25 @@ class Record:
         self.email_label = Label(self.frame, text='Email = ' + email, font=('Eras Demi bold', 15), bg='white')
         self.email_label.place(x=5, y=150)
 
+        #fetching data from db
+
+        query='''select date_of_entry,disease_name,medicines,note
+                from entries e
+                join disease d on e.disease_id=d.disease_id
+                where patient_id=%d;'''
+        # print(self.patient.id)
+        params=(self.patient.id,)
+        res=getRecords(query,params)
+        info=[]
+        for entries in res:
+            new_entry=[]
+            for data in entries:
+                new_entry.append(data)
+            info.append(entries)
+
+
         # Making table:
-        info = [[1,'d1','m1,m2,m3','s1s2'],[10,'d5','m1,m10,m3','s10s2']]
+        #info = [[1,'d1','m1,m2,m3','s1s2'],[10,'d5','m1,m10,m3','s10s2']]
         cols=('Date of visit', 'Disease', 'medications', 'Notes')
         self.record = ttk.Treeview(self.frame, columns=cols, show='headings')   #sets identifier to each columns using parameter 'COLUMNS'
         self.record.column('Notes', width=380)
@@ -49,5 +68,7 @@ class Record:
 
 if __name__=='__main__':
     window = Tk()
-    Record(window)
+    import patients
+    dummy_patient=patients.Patients(id=int(1),name="dummy_name",age=20,email="dumm_mail@gmail.com",gender="M",phone_number="1234567890",dob='2000-6-10')
+    Record(window,dummy_patient)
     window.mainloop()

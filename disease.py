@@ -4,7 +4,7 @@ from datetime import date
 # from tkinter import messagebox
 
 class Disease:
-    def __init__(self, window):
+    def __init__(self, window,patient):
         self.root=window
         self.frame = Frame(window, height=600, width=640, bg='white')
         self.frame.pack()
