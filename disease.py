@@ -1,11 +1,13 @@
 from tkinter import *
 # from tkinter import ttk
 from datetime import date
-# from tkinter import messagebox
+from Connection import  *
+from tkinter import messagebox
 
 class Disease:
-    def __init__(self, window):
+    def __init__(self, window,patient):
         self.root=window
+        self.patient=patient
         self.frame = Frame(window, height=600, width=640, bg='white')
         self.frame.pack()
         self.frame.pack_propagate(0)
@@ -51,14 +53,33 @@ class Disease:
         b_submit.place(x=320, y=480)
 
     def get_data(self):
+        current_date = str(date.today())
         disease_name = self.dis_entry.get("1.0","end-1c")
         med_list = self.med_entry.get("1.0","end-1c")
         symptoms = self.sym_entry.get("1.0","end-1c")
         print(disease_name, med_list, symptoms)
+        disease_id = insertRecord(disease_name)
+        if(disease_id==None):
+            print("No such disease found")
+            query="insert into hospital.disease(disease_name,medicines) values('%s','%s')"
+            params=(disease_name,med_list)
+            execute_query(query,params)
+            messagebox.showinfo("Inserted Successfully",'New disease information has been entered into database')
+        disease_id = insertRecord(disease_name)
+        disease_id=disease_id[0]
+        query="insert into hospital.entries(patient_id,disease_id,date_of_entry,note) values(%d,%d,'%s','%s')"
+        params=(self.patient.id,disease_id,current_date,symptoms)
+        print(self.patient.id,disease_id,current_date,symptoms)
+        execute_query(query,params)
+
+
         self.root.destroy()
 
 
 if __name__=='__main__':
     window=Tk()
-    Disease(window)
+    import patients
+    dummy_patient = patients.Patients(id=2, name="dummy_name", age=20, email="dumm_mail@gmail.com", gender="M",
+                                  phone_number="1234567890", dob='2000-6-10')
+    Disease(window,dummy_patient)
     window.mainloop()

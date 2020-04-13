@@ -97,7 +97,7 @@ class SignUp:
                 gender='F'
             print("Phonenumber = ",int(self.phone_entry.get()))
             print("EmailId = ",self.email_entry.get())
-            new_patient=Patients(self.name_entry.get(),int(self.age_entry.get()),gender,self.email_entry.get(),self.phone_entry.get(),self.dob_entry.get())
+            new_patient=Patients(name=self.name_entry.get(),age=int(self.age_entry.get()),gender=gender,email=self.email_entry.get(),phone_number=self.phone_entry.get(),dob=self.dob_entry.get())
             insertData(new_patient)
             import patient_login
             self.frame.destroy()

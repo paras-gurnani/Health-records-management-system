@@ -1,7 +1,8 @@
 from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
-from Connection import *
+#from Connection import *
+from piechart import *
 
 
 class PatientLogin:
@@ -40,6 +41,9 @@ class PatientLogin:
         reg_patient = Button(self.frame, text='Register a new patient', relief='groove', command=self.toPatientSignUp,
                              font=('Eras Demi ITC', 15))
         reg_patient.place(x=230, y=300)
+
+        analysis = Button(self.frame, text='See analysis', relief='groove', command=draw, font=('Eras Demi ITC',15))
+        analysis.place(x=270,y=350)
 
     def toPatientInfo(self):
         try:
