@@ -1,10 +1,12 @@
 from tkinter import *
 # from tkinter.ttk import *
 from tkinter import ttk
+from Connection import *
 
 class PatientInfo:
-    def __init__(self, root):
+    def __init__(self, root,patient):
         self.root=root
+        self.patient=patient
         self.frame = Frame(root, height=640, width=740, bg="white")
         self.frame.pack()
         self.create_border()
@@ -33,15 +35,15 @@ class PatientInfo:
     #Add one parameter in add_patient_info Patient object which will get its values from database
     def add_patient_info(self):
         #text in each label will be changed by tapping into patient object
-        self.p_name = Label(self.frame, text="Dummy_name", font=('Segoe UI Black ',15), bg='white')
+        self.p_name = Label(self.frame, text=self.patient.name, font=('Segoe UI Black ',15), bg='white')
         self.p_name.place(x=150, y=210)
-        self.p_age = Label(self.frame, text="Dummy_Age", font=("Segoe UI Black ", 15), bg="white")
+        self.p_age = Label(self.frame, text=self.patient.age, font=("Segoe UI Black ", 15), bg="white")
         self.p_age.place(x=150, y=270)
-        self.p_gender = Label(self.frame, text="Male", font=("Segoe UI Black ", 15), bg="white")
+        self.p_gender = Label(self.frame, text=self.patient.gender, font=("Segoe UI Black ", 15), bg="white")
         self.p_gender.place(x=150, y=330)
-        self.p_contact = Label(self.frame, text="1234567890", font=("Segoe UI Black ", 15), bg="white")
+        self.p_contact = Label(self.frame, text=self.patient.phone_number, font=("Segoe UI Black ", 15), bg="white")
         self.p_contact.place(x=150, y=390)
-        self.p_email = Label(self.frame, text="Dummy_email@gmail.com", font=("Segoe UI Black ", 15), bg="white")
+        self.p_email = Label(self.frame, text=self.patient.email, font=("Segoe UI Black ", 15), bg="white")
         self.p_email.place(x=150, y=450)
 
     def add_buttons(self):
@@ -66,10 +68,10 @@ class PatientInfo:
 
 
     def toDisease(self):
-        import Disease
+        import disease
         win = Toplevel()
         win.title('Diagnose')
-        Disease.Disease(win)
+        disease.Disease(win)
 
 
 if __name__=='__main__':

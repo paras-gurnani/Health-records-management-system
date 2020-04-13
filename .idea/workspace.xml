@@ -3,6 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="55be89f2-6fc8-4c70-9ded-a9946cca89dc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/disease.py" beforeDir="false" afterPath="$PROJECT_DIR$/disease.py" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/MatPractise.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Patient_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/PatientInfo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Signup.py" beforeDir="false" afterPath="$PROJECT_DIR$/Signup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/disease.py" beforeDir="false" afterPath="$PROJECT_DIR$/Disease.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/records.py" beforeDir="false" afterPath="$PROJECT_DIR$/Record.py" afterDir="false" />
+>>>>>>> 6b823da898604c20f3f1b89155311871e194e883
+>>>>>>> 954b52e883e6a084129590b00a3a56bed0b77bfd
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +41,13 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
+<<<<<<< HEAD
+  <component name="RunManager" selected="Python.disease">
+    <configuration name="Views" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
   <component name="RunManager" selected="Python.DoctorLogin">
     <configuration name="Disease" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> 6b823da898604c20f3f1b89155311871e194e883
       <module name="PythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -41,7 +59,11 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< HEAD
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Views.py" />
+=======
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Disease.py" />
+>>>>>>> 6b823da898604c20f3f1b89155311871e194e883
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -50,7 +72,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
+    <configuration name="disease (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
     <configuration name="DoctorLogin" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> 6b823da898604c20f3f1b89155311871e194e883
       <module name="PythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -58,11 +84,15 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< HEAD
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/disease.py" />
+=======
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DoctorLogin.py" />
+>>>>>>> 6b823da898604c20f3f1b89155311871e194e883
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -71,7 +101,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
+    <configuration name="disease" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
     <configuration name="PatientInfo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> 6b823da898604c20f3f1b89155311871e194e883
       <module name="PythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -83,7 +117,11 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< HEAD
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/disease.py" />
+=======
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PatientInfo.py" />
+>>>>>>> 6b823da898604c20f3f1b89155311871e194e883
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -136,11 +174,19 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
+        <item itemvalue="Python.disease" />
+        <item itemvalue="Python.disease (1)" />
+        <item itemvalue="Python.views" />
+        <item itemvalue="Python.Views" />
+        <item itemvalue="Python.records" />
+=======
         <item itemvalue="Python.DoctorLogin" />
         <item itemvalue="Python.Disease" />
         <item itemvalue="Python.PatientInfo" />
         <item itemvalue="Python.patient_login" />
         <item itemvalue="Python.Signup" />
+>>>>>>> 6b823da898604c20f3f1b89155311871e194e883
       </list>
     </recent_temporary>
   </component>
@@ -187,6 +233,29 @@
     <option name="LAST_COMMIT_MESSAGE" value="done some basic changes with positioning of objects" />
   </component>
   <component name="WindowStateProjectService">
+<<<<<<< HEAD
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1585857008486">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1585857008486" />
+    <state width="1515" height="223" key="GridCell.Tab.0.bottom" timestamp="1585858560463">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1585858560463" />
+    <state width="1515" height="223" key="GridCell.Tab.0.center" timestamp="1585858560463">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1585858560463" />
+    <state width="1515" height="223" key="GridCell.Tab.0.left" timestamp="1585858560462">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1585858560462" />
+    <state width="1515" height="223" key="GridCell.Tab.0.right" timestamp="1585858560463">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1585858560463" />
+    <state width="1515" height="277" key="GridCell.Tab.1.bottom" timestamp="1584261913546">
+=======
     <state x="0" y="94" key="#Inspections" timestamp="1585583891430">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -236,6 +305,7 @@
     <state width="1343" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586707768094" />
     <state width="739" height="221" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1585809535293" />
     <state width="1484" height="274" key="GridCell.Tab.1.bottom" timestamp="1585782514318">
+>>>>>>> 6b823da898604c20f3f1b89155311871e194e883
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1484" height="274" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1585782514318" />
@@ -263,6 +333,14 @@
     <state x="0" y="140" key="new project wizard" timestamp="1585759166842">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
+<<<<<<< HEAD
+    <state width="1515" height="277" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1584261913546" />
+    <state x="578" y="349" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584804897753">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="578" y="349" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1584804897753" />
+=======
     <state x="0" y="140" key="new project wizard/0.0.1536.864@0.0.1536.864" timestamp="1585759166842" />
+>>>>>>> 6b823da898604c20f3f1b89155311871e194e883
   </component>
 </project>

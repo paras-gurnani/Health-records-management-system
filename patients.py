@@ -1,17 +1,31 @@
 # from PIL import Image
 class Patients:
-    def __init__(self, name, age, gender, email, phone_number, image=None, disease=[], medicines=[], notes="",
+    def __init__(self , name, age, gender, email, phone_number, dob,image=None,id=None, disease=[], medicines=[], notes="",
                  date_of_visits=[]):
+        self.id=id
         self.name = name
         self.age = age
         self.gender = gender
         self.email = email
         self.phone_number = phone_number
+        self.dob=dob
         self.image = image
         self.diseases = disease
         self.medicines = medicines
         self.notes = notes
         self.date_of_visit = date_of_visits
+
+    #Function for testing if patient object is created or not
+
+    def printDetails(self):
+        print(self.name)
+        print(self.gender)
+        print(self.email)
+        print(self.phone_number)
+        print(self.age)
+        print(self.dob)
+
+
 
     # Getters
     def getName(self):

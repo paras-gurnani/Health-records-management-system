@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
+from Connection import *
 
 
 class PatientLogin:
@@ -41,10 +42,21 @@ class PatientLogin:
         reg_patient.place(x=230, y=300)
 
     def toPatientInfo(self):
-        self.frame.destroy()
-        import PatientInfo
-        self.root.geometry('740x640')
-        PatientInfo.PatientInfo(self.root)
+        try:
+            patient_id=int(self.login_entry.get())
+            dob=self.dob_entry.get()
+            current_patient=getPatient(patient_id,dob)
+            if(current_patient==None):
+                messagebox.showerror('Error', "No patient found")
+                self.login_entry.delete(0,'end')
+                self.dob_entry.delete(0,'end')
+            else:
+                self.frame.destroy()
+                import PatientInfo
+                self.root.geometry('740x640')
+                PatientInfo.PatientInfo(self.root,current_patient)
+        except ValueError as ve:
+            print(ve)
 
     def toPatientSignUp(self):
         self.frame.destroy()

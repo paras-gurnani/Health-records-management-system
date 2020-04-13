@@ -1,0 +1,8 @@
+alter table Patients
+add DOB date after phone_no;
+
+update patients set DOB='2000-6-10' where patient_id=1;
+update patients set DOB='2001-3-25' where patient_id=2;
+update patients set DOB='2000-9-12' where patient_id=3;
+update patients set DOB='2001-1-1' where patient_id=4;
+update patients set DOB='2000-11-4' where patient_id=5;
