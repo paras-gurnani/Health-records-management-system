@@ -77,10 +77,25 @@ def insertRecord(params=None):
     curr.close()
     conn.close()
     return result
-<<<<<<< HEAD
-=======
+
+def analysePatients(param):
+    conn = connect(host="127.0.0.1", database="hospital", user="root", password='password')
+    curr = conn.cursor()
+    query = '''SELECT 
+                    MONTHNAME(date_of_entry),count((monthname(date_of_entry)))
+                FROM
+                    entries
+                where
+	                monthname(date_of_entry)='%s';'''
+    curr.execute(query%param)
+    result = curr.fetchall()
+    # print(result)
+    curr.close()
+    conn.close()
+    return result
+
+
 
 
 if __name__ == '__main__':
-    getEntries()
->>>>>>> dd5e3d5b4e757cba674e9c5818843521d45f3aca
+    analysePatients()
