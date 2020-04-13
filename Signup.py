@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
+from tkinter import filedialog
 from patients import *
 from Connection import *
 
@@ -51,6 +52,9 @@ class SignUp:
         self.dob=Label(self.frame,text="DOB : ",font=('Eras Demi ITC bold', 15),bg='white')
         self.dob.place(x=118,y=450)
 
+        self.img_label = Label(self.frame,text='Image : ',font=('Eras Demi ITC bold',15), bg='white')
+        self.img_label.place(x=93, y=500)
+
     def add_entry(self):
         self.name_entry = ttk.Entry(self.frame, width=30, justify=LEFT, font=('Eras Demi ITC bold', 15))
         self.name_entry.place(x=180, y=205)
@@ -68,9 +72,12 @@ class SignUp:
         self.dob_entry=ttk.Entry(self.frame, width=30, justify=LEFT, font=('Eras Demi ITC bold', 15))
         self.dob_entry.place(x=180,y=450)
 
+        self.img_entry=ttk.Entry(self.frame, width=30, justify=LEFT, font=('Eras Demi ITC bold', 15))
+        self.img_entry.place(x=180, y=500)
+
     def add_radio(self):
         self.gender_value = IntVar()
-        self.gender_value.set(2)
+        self.gender_value.set(0)
 
         self.male = Radiobutton(self.frame, text='Male', value=0, variable=self.gender_value,font=('Arial',15), bg='white')
         self.male.place(x=200, y=250)
@@ -79,10 +86,11 @@ class SignUp:
         self.female.place(x=300, y=250)
 
     def add_button(self):
+        self.browseButton = Button(self.frame, highlightthickness=0, text='Browse',command=self.browse, font=('Eras Demi ITC',11))
+        self.browseButton.place(x=520, y=500)
+
         self.signin = Button(self.frame, highlightthickness=0, text='Signup',command=self.getData, font=('Eras Demi ITC',15))
-        # self.img = PhotoImage(file="./Images/login.png")
-        # self.signin.config(image=self.img)
-        self.signin.place(x=290, y=500)
+        self.signin.place(x=290, y=550)
 
     def getData(self, event=None):
         print("Name:",self.name_entry.get())
@@ -97,14 +105,22 @@ class SignUp:
                 gender='F'
             print("Phonenumber = ",int(self.phone_entry.get()))
             print("EmailId = ",self.email_entry.get())
-            new_patient=Patients(name=self.name_entry.get(),age=int(self.age_entry.get()),gender=gender,email=self.email_entry.get(),phone_number=self.phone_entry.get(),dob=self.dob_entry.get())
+            img_addr = None
+            if(self.img_entry.get() != None):
+                img_addr = self.img_entry.get()
+            new_patient=Patients(name=self.name_entry.get(),age=int(self.age_entry.get()),gender=gender,email=self.email_entry.get(),phone_number=self.phone_entry.get(),dob=self.dob_entry.get(),image = img_addr)
             insertData(new_patient)
             import patient_login
             self.frame.destroy()
+            self.root.geometry('640x440')
             patient_login.PatientLogin(self.root)   ### OPTION ###
         except ValueError as ve:
             messagebox.showerror('Error', "invalid credentials")
 
+    def browse(self):
+        filename = filedialog.askopenfilename(initialdir = '/', title='Select image')
+        print(type(filename), filename)
+        self.img_entry.insert(0,filename)
 
 if __name__ == '__main__':
     window = Tk()

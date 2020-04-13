@@ -9,6 +9,11 @@ class PatientInfo:
         self.patient=patient
         self.frame = Frame(root, height=640, width=740, bg="white")
         self.frame.pack()
+        # setting up image:
+        if patient.image!=None:
+            self.img_addr = patient.image
+        else:
+            self.img_addr = './patientImages/'+patient.name[0].upper()+'.png'
         self.create_border()
         self.add_labels()
         self.add_patient_info()
@@ -35,6 +40,12 @@ class PatientInfo:
     #Add one parameter in add_patient_info Patient object which will get its values from database
     def add_patient_info(self):
         #text in each label will be changed by tapping into patient object
+        self.photo = PhotoImage(file=self.img_addr)
+        self.image_label = Label(self.frame, bg='white')
+        self.image_label.image = self.photo  # anchoring the image
+        self.image_label.configure(image=self.photo)
+        self.image_label.place(x=150, y=100)
+
         self.p_name = Label(self.frame, text=self.patient.name, font=('Segoe UI Black ',15), bg='white')
         self.p_name.place(x=150, y=210)
         self.p_age = Label(self.frame, text=self.patient.age, font=("Segoe UI Black ", 15), bg="white")
@@ -71,11 +82,7 @@ class PatientInfo:
         import disease
         win = Toplevel()
         win.title('Diagnose')
-<<<<<<< HEAD
-        disease.Disease(win)
-=======
-        Disease.Disease(win,self.patient)
->>>>>>> 95498014ceda4891a04f9411c13a9ce64471b1df
+        disease.Disease(win,self.patient)
 
 
 if __name__=='__main__':
