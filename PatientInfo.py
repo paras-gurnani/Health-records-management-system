@@ -68,10 +68,14 @@ class PatientInfo:
 
 
     def toDisease(self):
-        import Disease
+        import disease
         win = Toplevel()
         win.title('Diagnose')
+<<<<<<< HEAD
+        disease.Disease(win)
+=======
         Disease.Disease(win,self.patient)
+>>>>>>> 95498014ceda4891a04f9411c13a9ce64471b1df
 
 
 if __name__=='__main__':

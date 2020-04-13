@@ -21,13 +21,19 @@ def getPatient(id=10, dob='2000-6-10'):
 def getEntries(id=1):
     conn = connect(host="127.0.0.1", database="hospital", user="root", password='password')
     curr = conn.cursor()
-    query = "select * from hospital.entries where patient_id=%d"
+    query = '''SELECT d.disease_name, count(e.disease_id) as freq
+                FROM
+                 entries e
+                JOIN
+                 disease d ON e.disease_id = d.disease_id
+                GROUP BY e.disease_id;'''
     param = (id,)
-    curr.execute(query % param)
+    curr.execute(query)
     result = curr.fetchall()
     print(result)
     curr.close()
     conn.close()
+    return result
 
 
 def insertData(patient):
@@ -71,3 +77,10 @@ def insertRecord(params=None):
     curr.close()
     conn.close()
     return result
+<<<<<<< HEAD
+=======
+
+
+if __name__ == '__main__':
+    getEntries()
+>>>>>>> dd5e3d5b4e757cba674e9c5818843521d45f3aca

@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55be89f2-6fc8-4c70-9ded-a9946cca89dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DoctorLogin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PythonProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/disease.py" beforeDir="false" afterPath="$PROJECT_DIR$/disease.py" afterDir="false" />
 =======
@@ -16,6 +15,7 @@
       <change beforePath="$PROJECT_DIR$/login.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/records.py" beforeDir="false" afterPath="$PROJECT_DIR$/Record.py" afterDir="false" />
 >>>>>>> 6b823da898604c20f3f1b89155311871e194e883
+>>>>>>> 954b52e883e6a084129590b00a3a56bed0b77bfd
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,25 +284,25 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1583937712714" />
-    <state width="1343" height="178" key="GridCell.Tab.0.bottom" timestamp="1586193110163">
+    <state width="1343" height="178" key="GridCell.Tab.0.bottom" timestamp="1586707768094">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586193110163" />
+    <state width="1343" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586707768094" />
     <state width="739" height="221" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1585809535293" />
-    <state width="1343" height="178" key="GridCell.Tab.0.center" timestamp="1586193110163">
+    <state width="1343" height="178" key="GridCell.Tab.0.center" timestamp="1586707768094">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586193110163" />
+    <state width="1343" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586707768094" />
     <state width="739" height="221" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1585809535292" />
-    <state width="1343" height="178" key="GridCell.Tab.0.left" timestamp="1586193110162">
+    <state width="1343" height="178" key="GridCell.Tab.0.left" timestamp="1586707768094">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586193110162" />
+    <state width="1343" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586707768094" />
     <state width="739" height="221" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1585809535292" />
-    <state width="1343" height="178" key="GridCell.Tab.0.right" timestamp="1586193110163">
+    <state width="1343" height="178" key="GridCell.Tab.0.right" timestamp="1586707768094">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586193110163" />
+    <state width="1343" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586707768094" />
     <state width="739" height="221" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1585809535293" />
     <state width="1484" height="274" key="GridCell.Tab.1.bottom" timestamp="1585782514318">
 >>>>>>> 6b823da898604c20f3f1b89155311871e194e883

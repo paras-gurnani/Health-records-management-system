@@ -42,6 +42,7 @@ class Record:
         # print(self.patient.id)
         params=(self.patient.id,)
         res=getRecords(query,params)
+        print(res)
         info=[]
         for entries in res:
             new_entry=[]
@@ -69,6 +70,6 @@ class Record:
 if __name__=='__main__':
     window = Tk()
     import patients
-    dummy_patient=patients.Patients(id=int(1),name="dummy_name",age=20,email="dumm_mail@gmail.com",gender="M",phone_number="1234567890",dob='2000-6-10')
+    dummy_patient=patients.Patients(id=int(2),name="dummy_name",age=20,email="dumm_mail@gmail.com",gender="M",phone_number="1234567890",dob='2000-6-10')
     Record(window,dummy_patient)
     window.mainloop()
