@@ -65,6 +65,7 @@ class PatientLogin:
     def toPatientSignUp(self):
         self.frame.destroy()
         import Signup
+        self.root.geometry('640x640')
         Signup.SignUp(self.root)
 
 
