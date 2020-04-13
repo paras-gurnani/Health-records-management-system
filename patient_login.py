@@ -6,7 +6,8 @@ from piechart import *
 
 
 class PatientLogin:
-    def __init__(self, window):
+    def __init__(self, window, dr):
+        self.dr = dr
         self.root=window
         self.frame = Frame(window, bg='white', height=440, width=640)
         self.frame.pack()
@@ -46,27 +47,30 @@ class PatientLogin:
         analysis.place(x=270,y=350)
 
     def toPatientInfo(self):
-        try:
-            patient_id=int(self.login_entry.get())
-            dob=self.dob_entry.get()
-            current_patient=getPatient(patient_id,dob)
-            if(current_patient==None):
-                messagebox.showerror('Error', "No patient found")
-                self.login_entry.delete(0,'end')
-                self.dob_entry.delete(0,'end')
-            else:
-                self.frame.destroy()
-                import PatientInfo
-                self.root.geometry('740x640')
-                PatientInfo.PatientInfo(self.root,current_patient)
-        except ValueError as ve:
-            print(ve)
+        if self.login_entry.get() in self.dr.patients:
+            try:
+                patient_id=int(self.login_entry.get())
+                dob=self.dob_entry.get()
+                current_patient=getPatient(patient_id,dob)
+                if(current_patient==None):
+                    messagebox.showerror('Error', "No patient found")
+                    self.login_entry.delete(0,'end')
+                    self.dob_entry.delete(0,'end')
+                else:
+                    self.frame.destroy()
+                    import PatientInfo
+                    self.root.geometry('740x640')
+                    PatientInfo.PatientInfo(self.root,current_patient,self.dr)
+            except ValueError as ve:
+                print(ve)
+        else:
+            messagebox.showinfo('Note', 'Enter id is not your patient')
 
     def toPatientSignUp(self):
         self.frame.destroy()
         import Signup
         self.root.geometry('640x640')
-        Signup.SignUp(self.root)
+        Signup.SignUp(self.root, self.dr)
 
 
 if __name__=='__main__':

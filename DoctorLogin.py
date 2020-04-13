@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
+from Connection import getDoctor
 
 
 class DoctorLogin:
@@ -41,9 +42,16 @@ class DoctorLogin:
         # reg_patient.place(x=230,y=300)
 
     def toPatientLogin(self):
-        import patient_login
-        self.frame.destroy()
-        patient_login.PatientLogin(self.root)
+        id = self.login_entry.get()
+        pas = self.password_entry.get()
+        dr = getDoctor(int(id),pas)
+        if dr!=None:
+            print(dr.id, dr.patients)
+            import patient_login
+            self.frame.destroy()
+            patient_login.PatientLogin(self.root,dr)
+        else:
+            messagebox.showerror('Error','Improper credentials')
         
 
 if __name__=='__main__':
