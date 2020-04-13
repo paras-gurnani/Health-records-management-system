@@ -47,7 +47,7 @@ def execute_query(query, parameters=None):
     if (parameters is None):
         cur.execute(query)
     else:
-        cur.execute(query, parameters)
+        cur.execute(query%parameters)
     conn.commit()
     cur.close()
     conn.close()
@@ -58,6 +58,16 @@ def getRecords(query,params=None):
     curr.execute(query % params)
     result = curr.fetchall()
     # print(result)
+    curr.close()
+    conn.close()
+    return result
+
+def insertRecord(params=None):
+    conn = connect(host="127.0.0.1", database="hospital", user="root", password='password')
+    curr = conn.cursor()
+    query="select disease_id from hospital.disease where disease_name='%s'"
+    curr.execute(query % params)
+    result = curr.fetchone()
     curr.close()
     conn.close()
     return result
