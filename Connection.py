@@ -120,6 +120,24 @@ def getDoctor(id=1, pas='alpha'):
     conn.close()
     return newDoctor
 
+
+def analysePatients(param):
+    conn = connect(host="127.0.0.1", database="hospital", user="root", password='password')
+    curr = conn.cursor()
+    query = '''SELECT 
+                    MONTHNAME(date_of_entry),count((monthname(date_of_entry)))
+                FROM
+                    entries
+                where
+	                monthname(date_of_entry)='%s';'''
+    curr.execute(query%param)
+    result = curr.fetchall()
+    # print(result)
+    curr.close()
+    conn.close()
+    return result
+
+
 def updateDoctor(dr):
     conn = connect(host='127.0.0.1', database='hospital', user='root', password='password')
     curr = conn.cursor()
@@ -134,5 +152,4 @@ def updateDoctor(dr):
     curr.close()
     conn.close()
 if __name__ == '__main__':
-    res = getDoctor()
-    print(res)
+    pass
