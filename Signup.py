@@ -7,7 +7,8 @@ from Connection import *
 
 
 class SignUp:
-    def __init__(self, root):
+    def __init__(self, root, dr):
+        self.dr = dr
         self.root=root
         # Binding ENTER key with signup button:
         # self.loginPage = loginPage
@@ -110,10 +111,19 @@ class SignUp:
                 img_addr = self.img_entry.get()
             new_patient=Patients(name=self.name_entry.get(),age=int(self.age_entry.get()),gender=gender,email=self.email_entry.get(),phone_number=self.phone_entry.get(),dob=self.dob_entry.get(),image = img_addr)
             insertData(new_patient)
-            import patient_login
+
+            patient = getPatientbyName(self.name_entry.get(), self.dob_entry.get())
+            print(patient.id)
+            print(self.dr.patients)
+            if str(patient.id) not in self.dr.patients:
+                self.dr.patients = self.dr.patients + ',' + str(patient.id)
+                print(self.dr.patients)
+                updateDoctor(self.dr)
+
+            import PatientInfo
             self.frame.destroy()
-            self.root.geometry('640x440')
-            patient_login.PatientLogin(self.root)   ### OPTION ###
+            self.root.geometry('740x640')
+            PatientInfo.PatientInfo(self.root, patient, self.dr)   ### OPTION ###
         except ValueError as ve:
             messagebox.showerror('Error', "invalid credentials")
 
@@ -124,5 +134,7 @@ class SignUp:
 
 if __name__ == '__main__':
     window = Tk()
-    SignUp(window)
+    import DoctorClass
+    dr=DoctorClass.Doctor(1,'1,2,3')
+    SignUp(window,dr)
     window.mainloop()

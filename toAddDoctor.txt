@@ -1,0 +1,8 @@
+use hospital;
+CREATE TABLE doctors
+(
+	doctor_id INT PRIMARY KEY AUTO_INCREMENT,
+	password VARCHAR(100) NOT NULL,
+    patient_list VARCHAR(100) NOT NULL
+);
+INSERT INTO doctors(password,patient_list) VALUES('alpha','1,2,3');

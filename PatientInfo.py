@@ -4,7 +4,8 @@ from tkinter import ttk
 from Connection import *
 
 class PatientInfo:
-    def __init__(self, root,patient):
+    def __init__(self, root,patient,dr):
+        self.dr=dr
         self.root=root
         self.patient=patient
         self.frame = Frame(root, height=640, width=740, bg="white")
@@ -69,7 +70,7 @@ class PatientInfo:
         import patient_login
         self.frame.destroy()
         self.root.geometry('640x440')
-        patient_login.PatientLogin(self.root)
+        patient_login.PatientLogin(self.root, self.dr)
 
     def toRecords(self):
         import Record
@@ -82,7 +83,7 @@ class PatientInfo:
         import disease
         win = Toplevel()
         win.title('Diagnose')
-        disease.Disease(win,self.patient)
+        disease.Disease(win, self.patient)
 
 
 if __name__=='__main__':
