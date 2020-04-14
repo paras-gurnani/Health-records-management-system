@@ -105,8 +105,5 @@ def analysePatients(param):
 
 
 if __name__ == '__main__':
-<<<<<<< HEAD
     analysePatients()
-=======
-    getPatient()
->>>>>>> 546e2d5d133bce192d27e397cc4eb53efe07c2cf
+
