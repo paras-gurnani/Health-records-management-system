@@ -8,6 +8,7 @@ class PatientInfo:
         self.dr=dr
         self.root=root
         self.patient=patient
+        self.type=type
         self.frame = Frame(root, height=640, width=740, bg="white")
         self.frame.pack()
         # setting up image:
@@ -69,14 +70,14 @@ class PatientInfo:
     def toPatientLogin(self):
         import patient_login
         self.frame.destroy()
-        self.root.geometry('640x440')
+        self.root.geometry('640x500')
         patient_login.PatientLogin(self.root, self.dr)
 
     def toRecords(self):
         import Record
         win = Toplevel()
         win.title('Records')
-        Record.Record(win,self.patient)
+        Record.Record(win,self.patient,self.dr,'dr')
 
 
     def toDisease(self):

@@ -8,8 +8,11 @@ from Connection import *
 # # window.geometry('1024x1024')
 
 class Record:
-    def __init__(self, root,patient):
-        self.frame = Frame(root, height=500, width=1024, bg='white')
+    def __init__(self, root,patient,dr=None,type='patient'):
+        self.root=root
+        self.dr=dr
+        self.type=type
+        self.frame = Frame(self.root, height=500, width=1024, bg='white')
         self.patient=patient
         self.frame.pack()
         self.frame.pack_propagate(0)
@@ -63,8 +66,17 @@ class Record:
         self.record.place(x=20, y=200)
 
         #Making a back button
-        self.back=Button(self.frame,text="Back", font=('Eras Demi bold', 15), bg='grey')
+        self.back=Button(self.frame,text="Back", font=('Eras Demi bold', 15), bg='grey',command=self.back)
         self.back.place(x=20,y=440)
+
+    def back(self):
+        if(self.type=='dr'):
+            self.root.destroy()
+        else:
+            import patient_login
+            self.frame.destroy()
+            self.root.geometry('640x440')
+            p=patient_login.PatientLogin(self.root,self.dr,self.type)
 
 
 if __name__=='__main__':

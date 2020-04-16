@@ -49,7 +49,7 @@ class DoctorLogin:
             print(dr.id, dr.patients)
             import patient_login
             self.frame.destroy()
-            patient_login.PatientLogin(self.root,dr)
+            patient_login.PatientLogin(self.root,dr,'dr')
         else:
             messagebox.showerror('Error','Improper credentials')
         
