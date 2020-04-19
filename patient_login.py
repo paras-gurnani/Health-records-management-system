@@ -13,6 +13,7 @@ class PatientLogin:
         # print(self.dr.id)
         self.type=type
         self.root=window
+        self.root.geometry('640x500')
         self.frame = Frame(window, bg='white', height=500, width=640)
         self.frame.pack()
         self.label()

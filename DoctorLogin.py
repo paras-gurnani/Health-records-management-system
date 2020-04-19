@@ -8,6 +8,7 @@ class DoctorLogin:
 
     def __init__(self, window):
         self.root=window
+        self.root.geometry('640x440')
         self.frame = Frame(window, bg='white', height=440, width=640)
         self.frame.pack()
         self.label()
